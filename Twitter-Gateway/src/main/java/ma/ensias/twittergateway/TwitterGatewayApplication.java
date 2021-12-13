@@ -10,16 +10,10 @@ import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
 public class TwitterGatewayApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TwitterGatewayApplication.class, args);
-    }
-
-    @GetMapping("/")
-    public Mono<String> home(WebSession webSession) {
-        return Mono.just(webSession.getId());
     }
 
 }
