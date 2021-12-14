@@ -2,12 +2,12 @@ package ma.ensias.twitter.controller;
 
 
 import ma.ensias.twitter.entities.HashTag;
-import ma.ensias.twitter.entities.Post;
+import ma.ensias.twitter.entities.Tweet;
 import ma.ensias.twitter.entities.User;
 import ma.ensias.twitter.services.SearchServiceInterface;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
@@ -33,9 +33,9 @@ public class ServiceSearchController {
     {
         return SearchServiceInterface.searchHashTag(hashTagName);
     }
-    @GetMapping("/search-post/{postContent}")
-    public Set<Post> searchPostMethode(@PathVariable String postContent)
+    @GetMapping("/search-tweet/{tweetContent}")
+    public Set<Tweet> searchPostMethode(@PathVariable String tweetContent)
     {
-        return SearchServiceInterface.searchPost(postContent);
+        return SearchServiceInterface.searchTweet(tweetContent);
     }
 }

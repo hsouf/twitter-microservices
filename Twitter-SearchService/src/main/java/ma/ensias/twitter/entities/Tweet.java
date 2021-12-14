@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Post {
+public class Tweet {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

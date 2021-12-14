@@ -24,6 +24,6 @@ public class User {
     private String password;
     private String email;
     @OneToMany
-    private Set<Post> listOfPosts;
+    private Set<Tweet> listOfPosts;
 
 }

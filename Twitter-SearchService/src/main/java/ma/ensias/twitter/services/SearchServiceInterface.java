@@ -1,7 +1,7 @@
 package ma.ensias.twitter.services;
 
 import ma.ensias.twitter.entities.HashTag;
-import ma.ensias.twitter.entities.Post;
+import ma.ensias.twitter.entities.Tweet;
 import ma.ensias.twitter.entities.User;
 
 import java.util.Set;
@@ -16,7 +16,7 @@ public interface SearchServiceInterface {
         return null;
     }
 
-    public static Set<Post> searchPost(String postKeyWord) {
+    public static Set<Tweet> searchTweet(String TweetKeyWord) {
         return null;
     }
 
