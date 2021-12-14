@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Data
@@ -21,6 +22,8 @@ public class User {
     private Long id;
     private String username;
     private String password;
-    private Date creationDate;
+    private String email;
+    @OneToMany
+    private Set<Post> listOfPosts;
 
 }

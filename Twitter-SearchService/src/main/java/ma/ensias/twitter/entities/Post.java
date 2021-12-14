@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -16,10 +17,13 @@ import java.util.Set;
 @ToString
 public class Post {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String texte;
+    private String Content;
     @ManyToMany
-    private Set<HashTag> listHashTags;
+    private Set<HashTag> listOfHashTags;
+    @ManyToOne
+    private User author;
+    private Date dateOfCreation;
 
 }
