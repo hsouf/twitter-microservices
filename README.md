@@ -13,7 +13,7 @@
 
 ![chat](./Images/Entite-message.png)
 
-### MESSAGE
+### HASHTAG
 
 ![chat](./Images/entite-Hashtag.png)
 
