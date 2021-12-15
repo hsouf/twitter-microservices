@@ -1,6 +1,22 @@
 # Twitter
+## Entites
 
+### USER 
 
+![chat](./Images/User.png)
 
-DM service architecture: (Auth Service is not implemented yet)
-![chat](https://user-images.githubusercontent.com/37840702/146179075-4ba9ee3c-cdd6-44ab-9d54-1658b50b6828.png)
+### TWEET
+
+![chat](./Images/entite-tweet.png)
+
+### MESSAGE
+
+![chat](./Images/Entite-message.png)
+
+### HASHTAG
+
+![chat](./Images/entite-Hashtag.png)
+
+### Comment
+![chat](./Images/Comment.png)
+

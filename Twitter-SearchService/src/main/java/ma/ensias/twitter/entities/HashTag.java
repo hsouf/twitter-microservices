@@ -22,7 +22,7 @@ public class HashTag {
     private long id;
     private String name;
     @ManyToMany
-    private Set<Post> listPosts;
+    private Set<Tweet> Tweets;
 
 
 }
