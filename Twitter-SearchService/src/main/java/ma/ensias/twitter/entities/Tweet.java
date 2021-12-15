@@ -21,7 +21,7 @@ public class Tweet {
     private Long id;
     private String Content;
     @ManyToMany
-    private Set<HashTag> listOfHashTags;
+    private Set<HashTag> hashTags;
     @ManyToOne
     private User author;
     private Date dateOfCreation;
