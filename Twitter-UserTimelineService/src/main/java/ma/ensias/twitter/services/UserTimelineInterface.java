@@ -1,5 +1,6 @@
 package ma.ensias.twitter.services;
 
+import ma.ensias.twitter.dto.Timeline;
 import ma.ensias.twitter.entities.User;
 
 import java.util.Set;
@@ -7,8 +8,9 @@ import java.util.Set;
 
 public interface UserTimelineInterface {
 
-    public static Set<User> searchUser(String usernameKeyWord) {
-        return null;
-    }
+  static Timeline accountPage(int id)
+  {
+      return null;
+  }
 
 }

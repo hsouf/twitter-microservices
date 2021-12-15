@@ -25,5 +25,19 @@ public class User {
     private String email;
     @OneToMany
     private Set<Tweet> listOfPosts;
+    @OneToMany
+    private Set<Message> messages;
+    @ManyToMany
+    private Set<User> followers;
+    @ManyToMany
+    private Set<User> following;
+    @ManyToMany
+    private Set<Tweet> liked;
+    @ManyToMany
+    private Set<Tweet> favored;
+    @OneToMany
+    private Set<Comment> comments;
+
+
 
 }

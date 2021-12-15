@@ -3,7 +3,7 @@
 
 ### USER 
 
-![chat](./Images/entite-User.png)
+![chat](./Images/User.png)
 
 ### TWEET
 
@@ -13,9 +13,12 @@
 
 ![chat](./Images/Entite-message.png)
 
-### MESSAGE
+### HASHTAG
 
 ![chat](./Images/entite-Hashtag.png)
+
+### Comment
+![chat](./Images/Comment.png)
 
 
 
