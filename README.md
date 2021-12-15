@@ -3,19 +3,19 @@
 
 ### USER 
 
-![chat](/home/moltissanti/Desktop/S5/ALBC/Twitter/Images/entite-User.png)
+![chat](./Images/entite-User.png)
 
 ### TWEET
 
-![chat](/home/moltissanti/Desktop/S5/ALBC/Twitter/Images/entite-tweet.png)
+![chat](./Images/entite-tweet.png)
 
 ### MESSAGE
 
-![chat](/home/moltissanti/Desktop/S5/ALBC/Twitter/Images/Entite-message.png)
+![chat](./Images/Entite-message.png)
 
 ### MESSAGE
 
-![chat](/home/moltissanti/Desktop/S5/ALBC/Twitter/Images/entite-Hashtag.png)
+![chat](./Images/entite-Hashtag.png)
 
 
 
