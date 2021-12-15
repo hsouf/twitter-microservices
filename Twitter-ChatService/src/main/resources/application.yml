@@ -1,18 +1,28 @@
 spring:
   application:
     name: DM-SERVICE
-  data:
-    mongodb:
-      uri: mongodb+srv://H9:H9@queen.wxjtd.mongodb.net/Twitter?retryWrites=true&w=majority
-      db: Twitter
   cloud:
     discovery:
       enabled: true
     loadbalancer:
       configurations: default
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/DM_DB
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
 
-
+server:
+  port: 8085
 
 eureka:
   client:
