@@ -7,21 +7,22 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-import java.util.Set;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class HashTag {
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String name;
-    @ManyToMany
-    private Set<Tweet> Tweets;
+    private Long id;
+    @ManyToOne
+    private User commentedBy;
+    @ManyToOne
+    private Tweet commentedTweet;
+    private String content;
+
 
 
 }

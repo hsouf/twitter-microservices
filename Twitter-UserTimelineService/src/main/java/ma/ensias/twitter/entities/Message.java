@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -22,6 +23,7 @@ public class Message {
     @ManyToOne
     private User Receiver;
     private String message;
+    private Date date;
 
 
 

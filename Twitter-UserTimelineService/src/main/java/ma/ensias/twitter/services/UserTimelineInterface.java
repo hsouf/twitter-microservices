@@ -8,8 +8,9 @@ import java.util.Set;
 
 public interface UserTimelineInterface {
 
-    public static Timeline accountPage(String usernameKeyWord) {
-        return null;
-    }
+  static Timeline accountPage(int id)
+  {
+      return null;
+  }
 
 }

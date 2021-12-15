@@ -31,6 +31,12 @@ public class User {
     private Set<User> followers;
     @ManyToMany
     private Set<User> following;
+    @ManyToMany
+    private Set<Tweet> liked;
+    @ManyToMany
+    private Set<Tweet> favored;
+    @OneToMany
+    private Set<Comment> comments;
 
 
 

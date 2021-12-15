@@ -24,6 +24,8 @@ public class Tweet {
     private Set<HashTag> hashTags;
     @ManyToOne
     private User author;
+    @OneToMany
+    private Set<Comment> comments;
     private Date dateOfCreation;
 
 }
