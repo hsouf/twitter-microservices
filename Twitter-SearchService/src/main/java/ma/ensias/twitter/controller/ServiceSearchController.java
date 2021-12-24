@@ -1,32 +1,34 @@
 package ma.ensias.twitter.controller;
 
-import ma.ensias.twitter.entities.HashTag;
-import ma.ensias.twitter.entities.Tweet;
-import ma.ensias.twitter.entities.User;
-import ma.ensias.twitter.services.SearchServiceInterface;
+
+import ma.ensias.twitter.services.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Set;
 
 @RestController
+@RequestMapping("/search")
 public class ServiceSearchController {
 
-    @GetMapping("/search-user/{username}")
-    public Set<User> searchUserMethode(@PathVariable String username)
+    @Autowired
+    SearchService searchService;
+
+    @GetMapping("/user/{username}")
+    public String searchUserMethode(@PathVariable String username)
     {
-       return SearchServiceInterface.searchUser(username);
+       return searchService.searchUser(username);
     }
-    @GetMapping("/search-hashtag/{hashtag}")
-    public Set<HashTag> searchHashtagMethode(@PathVariable String hashTagName)
+    @GetMapping("/hashtag/{hashtag}")
+    public String searchHashtagMethode(@PathVariable String hashtag)
     {
-        return SearchServiceInterface.searchHashTag(hashTagName);
+        return searchService.searchHashTag(hashtag);
     }
-    @GetMapping("/search-tweet/{tweetContent}")
-    public Set<Tweet> searchPostMethode(@PathVariable String tweetContent)
+    @GetMapping("/tweet/{tweetContent}")
+    public String searchPostMethode(@PathVariable String tweetContent)
     {
-        return SearchServiceInterface.searchTweet(tweetContent);
+        return searchService.searchTweet(tweetContent);
     }
 }
