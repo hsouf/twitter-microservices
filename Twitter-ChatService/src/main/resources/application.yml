@@ -1,6 +1,6 @@
 spring:
   application:
-    name: DM-SERVICE
+    name: dm-service
   cloud:
     discovery:
       enabled: true
@@ -22,7 +22,7 @@ spring:
     allow-bean-definition-overriding: true
 
 server:
-  port: 8085
+  port: 8084
 
 eureka:
   client:
