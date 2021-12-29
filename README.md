@@ -2,6 +2,7 @@
 
 ## Entites
 
+
 ### USER 
 
 ![chat](./Images/User.png)
@@ -13,6 +14,8 @@
 ### MESSAGE
 
 ![chat](./Images/Entite-message.png)
+### CHAT ROOM
+![chatRoom](https://user-images.githubusercontent.com/37840702/147685071-f9498db6-76c7-486d-a17d-d5b6d2e4edf3.png)
 
 ### HASHTAG
 
@@ -52,4 +55,36 @@
 
 - POST http://localhost:8080/user-service/user/signin 
 - POST http://localhost:8080/user-service/user/signup 
+### DM service
+
+Le client STOMP se connecte au serveur via un websocket au terminal suivant "http://localhost:8084/dm-service/ws", ci-dessous le code à implémenter côté client: 
+```javascript
+
+const connect = () => {
+    const Stomp = require("stompjs");
+    var SockJS = require("sockjs-client");
+    SockJS = new SockJS("http://localhost:8080/dm-service/ws");
+    stompClient = Stomp.over(SockJS);
+    stompClient.connect({}, onConnected, onError);
+  };
+  ```
+Le client ensuite envoie un message au broker sur "/app/chat" 
+
+```javascript
+const sendMessage = (msg) => {
+    if (msg.trim() !== "") {
+      const message = {
+        senderId: currentUser.id,
+        recipientId: activeContact.id,
+        senderName: currentUser.name,
+        recipientName: activeContact.name,
+        content: msg,
+        timestamp: new Date(),
+      };
+        
+      stompClient.send("/app/chat", {}, JSON.stringify(message));
+    }
+  };
+```
+
 
