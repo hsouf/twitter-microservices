@@ -1,6 +1,21 @@
 # Twitter
 
-## Entites
+A simple implementation of Twitter microservices architecture suing Spring Boot.
+
+## Contributors
+
+<a href = "https://github.com/hsouf/twitter-microservices/graphs/contributors">
+<img src = "https://contrib.rocks/image?repo=hsouf/twitter-microservices"/>
+</a>
+
+
+## Architecture
+
+<img width="972" alt="twitter" src="https://user-images.githubusercontent.com/37840702/199830627-f6ba812c-d451-40a5-a746-82f104b15395.png">
+
+
+
+## Entities
 
 
 ### USER 
