@@ -1,6 +1,6 @@
 # Twitter
 
-A simple implementation of Twitter microservices architecture suing Spring Boot.
+A simple implementation of Twitter microservices architecture using Spring Boot.
 
 ## Contributors
 
